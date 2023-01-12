@@ -91,7 +91,7 @@ const MESSAGES={
         type:'error'
     }),
     INSERT_OK: id=>({
-        message:`flower ${id} was inserted`,
+        message:`Flower ${id} was inserted`,
         code:CODES.INSERT_OK,
         type:'info'
     })

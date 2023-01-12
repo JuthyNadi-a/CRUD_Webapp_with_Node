@@ -46,7 +46,7 @@ app.post('/getFlower', (req,res)=>{
 app.get('/inputform', (req,res)=> 
     res.render('form',{
         title:'Add Flower',
-        header1:'Add a new Flower',
+        header1:'Add a New Flower',
         action:'/input',
         flowerId:{value:'', readonly:''},
         name: { value: '', readonly: '' },
@@ -77,14 +77,14 @@ app.get('/updateform', (req, res) =>
 
 app.post('/updatedata', (req,res)=>{
     if(!req.body) return res.sendStatus(500);
-
-    dataStorage.getOne(req.body.id)
+    
+    dataStorage.getOne(req.body.flowerId)
         .then(flower=>
             res.render('form', {
                 title: 'Update Flower',
                 header1: 'Update Flower data',
                 action: '/update',
-                id: { value: flower.flowerId, readonly: 'readonly' },
+                flowerId: { value: flower.flowerId, readonly: 'readonly' },
                 name: { value: flower.name, readonly: '' },
                 farmer: { value: flower.farmer, readonly: '' },
                 site: { value: flower.site, readonly: '' },
@@ -96,7 +96,7 @@ app.post('/updatedata', (req,res)=>{
 
 app.post('/update', (req, res) => {
     if (!req.body) return res.statusCode(500);
-
+    
     dataStorage.update(req.body)
         .then(status => sendStatusPage(res, status))
         .catch(error => sendErrorPage(res, error))
@@ -105,7 +105,7 @@ app.post('/update', (req, res) => {
 app.get('/removeFlower', (req, res) =>
     res.render('getFlower', {
         title: 'Remove',
-        header1: 'remove',
+        header1: 'Remove',
         action: '/removeFlower'
     })
 );

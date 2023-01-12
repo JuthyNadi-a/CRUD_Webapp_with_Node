@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flowers</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <main>
+        <h2>All flowers</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Flower id</th>
+                    <th>Name</th>
+                    <th>Farmer</th>
+                    <th>Site</th>
+                    <th>Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% result.forEach(flower => { %>
+                    <tr>
+                        <td><%= flower.flowerId %></td>
+                        <td><%= flower.name %></td>
+                        <td><%= flower.farmer %></td>
+                        <td><%= flower.site %></td>
+                        <td><%= flower.stock %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <a href="/"><button>Menu</button></a>
+    </main>
+</body>
+</html>

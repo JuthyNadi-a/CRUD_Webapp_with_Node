@@ -19,7 +19,7 @@ const MESSAGES = {
         type: 'error'
     }),
     NOT_FOUND: id => ({
-        message: `No flower found with id ${id}`,
+        message: `No flower found with given id!`,
         code: CODES.NOT_FOUND,
         type: 'error'
     }),

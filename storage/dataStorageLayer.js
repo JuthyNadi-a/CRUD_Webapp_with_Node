@@ -21,18 +21,18 @@ module.exports = class Datastorage{
         return getAllFromStorage();
     } //end getAll
 
-    getOne(id){
+    getOne(flowerId){
         return new Promise(async (resolve,reject)=>{
-            if(!id){
-                reject(MESSAGES.NOT_FOUND('---empty---'));
+            if(!flowerId){
+                reject(MESSAGES.NOT_FOUND(flowerId));
             }
             else{
-                const result = await getFromStorage(id);
+                const result = await getFromStorage(flowerId);
                 if(result){
                     resolve(result);
                 }
                 else{
-                    reject(MESSAGES.NOT_FOUND(id))
+                    reject(MESSAGES.NOT_FOUND(flowerId))
                 }
             }
         });
@@ -79,7 +79,7 @@ module.exports = class Datastorage{
     remove(flowerId){
         return new Promise(async (resolve,reject)=>{
             if(!flowerId){
-                reject(MESSAGES.NOT_FOUND('---empty---'));
+                reject(MESSAGES.NOT_FOUND(flowerId));
             }
             else if(await removeFromStorage(flowerId)){
                 resolve(MESSAGES.REMOVE_OK(flowerId));
