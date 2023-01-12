@@ -49,12 +49,12 @@ const MESSAGES = {
         type:'error'
     }),
     REMOVE_OK: id=>({
-        message:`flower ${id} was removed`,
+        message:`Flower ${id} was removed`,
         code:CODES.REMOVE_OK,
         type:'info'
     }),
     NOT_REMOVED: id=>({
-        message:`No flower found with Id ${id}.Nothing removed`,
+        message:`No flower found with id ${id}. Nothing removed`,
         code:CODES.NOT_REMOVED,
         type:'error'
     })

@@ -41,14 +41,14 @@ module.exports = class Datastorage{
     insert(flower){
         return new Promise(async (resolve,reject)=>{
             if(flower){
-                if(!flower.id){
+                if(!flower.flowerId){
                     reject(MESSAGES.NOT_INSERTED());
                 }
-                else if(await getFromStorage(flower.id)){
-                    reject(MESSAGES.ALREADY_IN_USE(flower.id))
+                else if(await getFromStorage(flower.flowerId)){
+                    reject(MESSAGES.ALREADY_IN_USE(flower.flowerId))
                 }
                 else if(await addToStorage(flower)){
-                    resolve(MESSAGES.INSERT_OK(flower.id))
+                    resolve(MESSAGES.INSERT_OK(flower.flowerId))
                 }
                 else{
                     reject(MESSAGES.NOT_INSERTED());
@@ -64,7 +64,7 @@ module.exports = class Datastorage{
         return new Promise(async (resolve,reject)=>{
             if(flower){
                 if(await updateStorage(flower)){
-                    resolve(MESSAGES.UPDATE_OK(flower.id));
+                    resolve(MESSAGES.UPDATE_OK(flower.flowerId));
                 }
                 else{
                     reject(MESSAGES.NOT_UPDATED());
@@ -76,16 +76,16 @@ module.exports = class Datastorage{
         });
     } //end update
 
-    remove(id){
+    remove(flowerId){
         return new Promise(async (resolve,reject)=>{
-            if(!id){
+            if(!flowerId){
                 reject(MESSAGES.NOT_FOUND('---empty---'));
             }
-            else if(await removeFromStorage(id)){
-                resolve(MESSAGES.REMOVE_OK(id));
+            else if(await removeFromStorage(flowerId)){
+                resolve(MESSAGES.REMOVE_OK(flowerId));
             }
             else{
-                reject(MESSAGES.NOT_REMOVED(id));
+                reject(MESSAGES.NOT_REMOVED(flowerId));
             }
         });
     } //end of remove

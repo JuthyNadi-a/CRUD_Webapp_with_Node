@@ -1,5 +1,5 @@
 {
     "storageFile": "Juthy_Nadia_flowers.json",
-    "adapterFile": "flowerAdapterV2.js",
+    "adapterFile": "flowerAdapter.js",
     "key": "flowerId"
 }

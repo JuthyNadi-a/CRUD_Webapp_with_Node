@@ -1,51 +1,51 @@
 [
     {
-    "flowerId":5,
-    "name":"marigold",
-    "farmer":"Rosamunda",
-    "site":"swamp",
-    "stock":1
+        "flowerId": 5,
+        "name": "marigold",
+        "farmer": "Rosamunda",
+        "site": "swamp",
+        "stock": 1
     },
     {
-    "flowerId":1,
-    "name":"tulip",
-    "farmer":"Roses of Rovaniemi oy",
-    "site":"shady",
-    "stock":7
+        "flowerId": 1,
+        "name": "tulip",
+        "farmer": "Roses of Rovaniemi oy",
+        "site": "shady",
+        "stock": 7
     },
     {
-    "flowerId":2,
-    "name":"violet",
-    "farmer":"Viola and Hyacinth Company",
-    "site":"garage",
-    "stock":13
+        "flowerId": 2,
+        "name": "violet",
+        "farmer": "Viola and Hyacinth Company",
+        "site": "garage",
+        "stock": 13
     },
     {
-    "flowerId":6,
-    "name":"rose",
-    "farmer":"Mike Mycelium Ltd.",
-    "site":"rocky",
-    "stock":15
+        "flowerId": 6,
+        "name": "rose",
+        "farmer": "Mike Mycelium Ltd.",
+        "site": "rocky",
+        "stock": 15
     },
     {
-    "flowerId":7,
-    "name":"lily-of-the-valley",
-    "farmer":"Poison Ivy & Co.",
-    "site":"bucket",
-    "stock":5
+        "flowerId": 7,
+        "name": "lily-of-the-valley",
+        "farmer": "Poison Ivy & Co.",
+        "site": "bucket",
+        "stock": 5
     },
     {
-    "flowerId":3,
-    "name":"toadstool",
-    "farmer":"Violet's Garden",
-    "site":"half shadow",
-    "stock":100
+        "flowerId": 3,
+        "name": "toadstool",
+        "farmer": "Violet's Garden",
+        "site": "half shadow",
+        "stock": 100
     },
     {
-    "flowerId":4,
-    "name":"mushroom",
-    "farmer":"Fungus Ltd.",
-    "site":"sunny",
-    "stock":10
+        "flowerId": 4,
+        "name": "mushroom",
+        "farmer": "Fungus Ltd.",
+        "site": "sunny",
+        "stock": 10
     }
-    ]
+]
